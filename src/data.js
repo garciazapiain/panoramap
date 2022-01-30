@@ -5,7 +5,7 @@ export default [
         "placeName" : "Vrtba Gardens",
         "placeNameOriginalLanguage": "Vrtbovská zahrada",
         "address": "Karmelitská 25, 118 00 Malá Strana",
-        "percentageCoords": [.18, .98, .65, .84],
+        "percentageCoords": [.18, .72, .68, .99],
         "geoCoords": {
             lat: 50.0864,
             lng: 14.4023
@@ -39,7 +39,7 @@ export default [
         "placeName" : "Church of Saint Nicholas",
         "placeNameOriginalLanguage": "Kostel svatého Mikuláše",
         "address": "Staroměstské nám. 1101, 110 00 Staré Město",
-        "percentageCoords": [.27, .41, .36, .64],
+        "percentageCoords": [.27, .37, .37, .65],
         "geoCoords": {
             lat: 50.0882,
             lng: 14.4032
@@ -56,7 +56,7 @@ export default [
         "placeName" : "St Thomas' Church",
         "placeNameOriginalLanguage": "Kostel svatého Tomáše",
         "address": "Josefská 28, 118 00 Malá Strana",
-        "percentageCoords": [.38,.62, .39, .53],
+        "percentageCoords": [.38,.51, .40, .63],
         "geoCoords": {
             lat: 50.0886   ,
             lng: 14.4058   
@@ -73,7 +73,7 @@ export default [
         "placeName" : "Old Town Bridge Tower",
         "placeNameOriginalLanguage": "Staroměstská mostecká věž",
         "address": "Karlův most, 110 00 Praha 1",
-        "percentageCoords": [.52, .62, .54, .56],
+        "percentageCoords": [.52, .57, .55, .65],
         "geoCoords": {
             lat: 50.0861,
             lng: 14.4136   
@@ -90,7 +90,7 @@ export default [
         "placeName" : "Church of Our Lady before Týn",
         "placeNameOriginalLanguage": "Kostel Matky Boží před Týnem",
         "address": "Staroměstské nám., 110 00 Staré Město",
-        "percentageCoords": [.58, .62, .59, .58],
+        "percentageCoords": [.58, .58, .60, .63],
         "geoCoords": {
             lat: 50.0876,
             lng: 14.4227 
@@ -107,7 +107,7 @@ export default [
         "placeName" : "Žižkov Television Tower",
         "placeNameOriginalLanguage": "Žižkovský vysílač",
         "address": "Mahlerovy sady 1, 130 00 Praha 3-Žižkov",
-        "percentageCoords": [.65, .60, .66, .55],
+        "percentageCoords": [.65, .56, .67, .61],
         "geoCoords": {
             lat: 50.0808,
             lng: 14.4513 
@@ -124,7 +124,7 @@ export default [
         "placeName" : "Church of Our Lady of Victories",
         "placeNameOriginalLanguage": "Kostel Panny Marie Vítězné",
         "address": "Karmelitská 9, 118 00 Praha 1",
-        "percentageCoords": [.72, .73, .78, .54],
+        "percentageCoords": [.72, .55, .80, .77],
         "geoCoords": {
             lat: 50.0857,
             lng: 14.4036  
@@ -141,7 +141,7 @@ export default [
         "placeName" : "Pankrác Plain",
         "placeNameOriginalLanguage": "Pankrácká pláň",
         "address": "140 00 Prague 4",
-        "percentageCoords": [.86, .63, .90, .58],
+        "percentageCoords": [.85, .59, .90, .64],
         "geoCoords": {
             lat: 50.0584,
             lng: 14.4320 
