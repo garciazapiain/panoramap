@@ -3,19 +3,32 @@ import React from 'react';
 import data from './data'
 import pano from './images/panoramic.jpeg'
 import InfoPlace from './components/InfoPlace.js'
-import LocationPlace from './components/LocationPlace'
+import LocationPlace from './components/LocationPlace';
+import HomeScreen from './components/HomeScreen';
 
 function App() {
   const [coords, setCoords] = React.useState("")
   const [dataPlaces] = React.useState(data)
-  const [selectedPlace, setSelectedPlace] = React.useState()
+  // const [geoCoords] = React.useState({lat: 50.0911, lng: 14.4016})
+  const [selectedPlace, setSelectedPlace] = React.useState(dataPlaces[0])
   const [dimensions, setDimensions] = React.useState([])
+  const [loading,setLoading] = React.useState(false)
+  const [homeScreen, setHomeScreen] = React.useState(true)
 
   // Get initial dimensions of page, will be needed to dynaically calculate the coordinates of each place
   function getDimensions(e) {
     let dimensionArr = [e.target.offsetWidth,e.target.offsetHeight] 
     setDimensions(dimensionArr)
   }
+
+  React.useEffect(() => {
+    async function getInitialPlace() {
+      const data = await (dataPlaces)
+      data ? setSelectedPlace(data[0]) : null
+      setLoading(true);
+    }
+      getInitialPlace()
+    }, [dataPlaces])
 
   // Map through all places and return area tag with dynamic coordinate information
   const mapPlaces = dataPlaces.map(place => {
@@ -28,41 +41,46 @@ function App() {
   
   // Used to get coords information to set on data.js
   function fireCoordInfo (e){
-    console.log(e)
     let coordsArr = [e.pageX, e.pageY]
     setCoords(coordsArr)
   }
 
   // function that reacts to place clicked, setting state for selected place
   function clickPlace (id) {
+    setHomeScreen(false)
     dataPlaces.map(place => {
       return place.id === id ? setSelectedPlace(place) : null
      })
     }  
 
+  function homeScreenDeactivate () {
+    setHomeScreen(false)
+  }
+
   return (
-    <div className='App'>
+    <div className='app'>
       <header>
       </header>
       <main>
         <div className='panoramic-map-container'>
           <img className="panoramic-map" src={pano} alt='panoramic' useMap='#panoramic-map' onClick={fireCoordInfo} onLoad={getDimensions} />
-          <div className='selector'></div>
         </div>
         <map name='panoramic-map'>
           {mapPlaces}
         </map>
-
-        <p><strong>Coords are:</strong> {coords[0]}, {coords[1]} <strong>Dimensions are: </strong>{dimensions[0]}, {dimensions[1]}</p>
-        <p><strong>Percentage coordinate are: </strong>{coords[0]/dimensions[0]}, {coords[1]/dimensions[1]} </p>
-        {selectedPlace &&
+        {/* <p><strong>Percentage coordinate are: </strong>{coords[0]/dimensions[0]}, {coords[1]/dimensions[1]} </p> */}
+        {homeScreen?
+          <HomeScreen
+            homeScreenDeactivate={homeScreenDeactivate}
+          />
+          :
           <div className='info-and-location'>
-              <InfoPlace 
-                selectedPlace={selectedPlace}
-              />
-              <LocationPlace
-                selectedPlace={selectedPlace}
-              />
+            <InfoPlace 
+              selectedPlace={selectedPlace}
+            />
+            <LocationPlace
+              selectedPlace={selectedPlace}
+            />
           </div>
         }
       </main>

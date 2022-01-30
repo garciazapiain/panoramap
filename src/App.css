@@ -1,6 +1,18 @@
+html {
+  overflow: hidden;
+  max-height:100vh;
+  background-color: lightskyblue
+}
+
+div.panoramic-map-container {
+  margin-bottom:-3px;
+}
+
 .panoramic-map-container img {
   width: 100vw;
+  height: 55vh;
 }
+
 .info-and-location{
   display:flex;
   width: 100%;
@@ -8,11 +20,72 @@
 }
 
 .info-section {
-  background-color: grey;
+  background-color: lightskyblue;
   width: 50vw;
 }
 
+.info-section-content {
+  display: flex;
+  margin: 0px 5px 5px 5px;
+  justify-content:center
+}
+
+.info-section-content-text {
+  justify-content:center;
+  width:60%;
+}
+
+.info-section-content img {
+  display: flex;
+  height:30vh;
+  margin-left: 20px;
+}
+
+table {
+  background: #fff;
+  border-collapse: collapse;
+  margin-bottom: 5px;
+}
+
+td {
+  font-family: Tahoma;
+  background: #ddd;
+  border:1px solid #fff
+}
+
+h1 {
+  margin-left: 15px;
+}
+
+h2 {
+  margin-left: 15px;
+}
+
+h5 {
+  margin: 5px;
+}
+
+p {
+  font-size: small;
+  margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .location-section {
-  background-color: lightgray;
+  background-color: lightskyblue;
   width: 50vw;
 }
+
