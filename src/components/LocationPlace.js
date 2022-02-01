@@ -5,8 +5,9 @@ function MapHook (props) {
         <Map 
           google={props.google} 
           zoom={14}
-          style={{width:"50vw", height:"47vh"}}
+          style={{width:"50vw", height:"45vh"}}
           initialCenter={{lat: props.selectedPlace.geoCoords.lat, lng: props.selectedPlace.geoCoords.lng}}
+          center={{lat: props.selectedPlace.geoCoords.lat, lng: props.selectedPlace.geoCoords.lng}}
          >
         <Marker 
           name={'Current location'} 
