@@ -1,6 +1,6 @@
 # Panoramap
 
-App that allows you to take a glance at a panoramic picture and get some more information of what you see.
+App that allows you to take a glance at a panoramic picture and get more information of what you see.
 
 ### How to run app for the first time
 
